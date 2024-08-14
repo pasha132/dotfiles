@@ -1,9 +1,9 @@
 # shellcheck shell=bash
 
-source $HOME/.config/zshrc.d/local.sh
+source "$HOME/.config/zshrc.d/local.sh"
 
 BREW_PREFIX="/opt/homebrew/opt/go" # $(brew --prefix golang)
-export GOPATH="${GOPATH_LOCAL:-$HOME/Documents/go}"
+export GOPATH="${LOCAL_GOPATH:-"$HOME/Documents/go"}"
 export GOROOT="$BREW_PREFIX/libexec"
 
 for env in "${GOPATH}/bin" "${GOROOT}/bin"; do
